@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Apply</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/apply.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <div class="container-fluid header border-bottom border-2">
+    <header class="d-flex flex-wrap py-3 mb-2 ml-5">
+      <a href="/" class="d-flex mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <svg class="bi me-2 img" width="40" height="32">
+          <image href="images/icon-images_anonymous-6597e549-facd-4964-86ab-d8d1d7f526ac.webp" x="0" y="0" width="40"
+            height="32" />
+        </svg>
+        <span class="fs-4">Jobs</span>
+      </a>
+    </header>
+  </div>
+
+  <div class="container-fluid">
+    <div class="cards mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <a href="/jobs">Jobs</a> > <strong>Junior Developer</strong>
+        </div>
+        <div class="main-card pb-4">
+          <div class="d-flex" style="margin-left: 2rem">
+            <div style="width: 9rem;">
+              <img
+                src="https://res.cloudinary.com/glide/image/fetch/f_auto,w_600,h_600,c_lfill/https%3A%2F%2Fstorage.googleapis.com%2Fglide-prod.appspot.com%2Fuploads-v2%2FVKNiD3wfhAZDbZ67cZO4%2Fpub%2FJASxNCPM1j1VUH5YWaPA.png"
+                class="img-fluid" alt="Image">
+            </div>
+          </div>
+
+          <div class="card-body ml-3 mt-4">
+            <div class="info">
+              <h6 style="color: rgb(249, 111, 111)"><strong>INTERNSHIP</strong></h6>
+              <h1 style="font-size:xx-large"><strong>Junior Developer</strong></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards" style="padding-top: 2rem;">
+        <div class="card pl-4 pt-2">
+          <div class="card-body">
+            <h1 style="font-size: x-large"><strong>Job Overview</strong></h1>
+            <p class="my-3 pr-3">Openings <span style="float: right;">2</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards mb-3" style="padding-top: 2rem;">
+        <div class="card pl-4 pt-2">
+          <div class="card-body">
+            <h1 style="font-size: x-large"><strong>Job Description</strong></h1>
+            <div class="content pb-3">
+              <p>
+                Responsibilities: <br>
+
+                - Contribute to technical architecture design for our new products and enhancements to current
+                products<br>
+                - Collaborate closely with other software engineers, product managers, and designers<br>
+                - Help other engineers on the team via mentorship, code pairs and code reviews<br>
+                - Hustle - plain and simple<br>
+
+                Requirements and qualifications:<br>
+
+                - Good grasp on JavaScript<br>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="con mt-5">
+        <form id="signup" class="form" action="/apply" method="post" enctype="multipart/form-data">
+          <h2 style="font-size: x-large; text-align: center;"><strong>Job Application Form</strong></h2>
+          <h5 style="font-size: larger; text-align: center"><strong>Personal Details</strong></h5>
+          <div class="form-field">
+            <label for="username">Full Name</label>
+            <input type="text" name="username" id="username" autocomplete="off" />
+            <small></small>
+          </div>
+
+          <div class="form-field append">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" autocomplete="off" />
+          </div>
+          <div class="form-field">
+            <label for="phNum">Phone Number</label>
+            <input type="phNum" name="phNum" id="phNum" autocomplete="off" />
+            <small></small>
+          </div>
+          <h5 style="font-size: larger; text-align: center"><strong>Professional Details</strong></h5>
+          <div class="form-field">
+            <label for="linkedin">Updated Linkedln Profile</label>
+            <input type="text" name="linkedin" id="linkedin" autocomplete="off" />
+            <small></small>
+          </div>
+
+          <div class="form-field">
+            <label for="WorkExp">Work Experience(in Months)
+            </label>
+            <input type="text" name="WorkExp" id="WorkExp" autocomplete="off" />
+            <small></small>
+          </div>
+
+
+          <div class="form-field">
+            <label for="resume">Upload CV
+            </label>
+            <input name="resume" id="resume" type='file' />
+            <small></small>
+          </div>
+
+          <div class="form-field-button">
+            <button type="submit" id="sign-in" class="btn btn-outline-dark" disabled>Apply</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const emailInput = document.querySelector('#email');
+    const append = document.querySelector('.append');
+
+    emailInput.addEventListener('blur', () => {
+      const email = emailInput.value;
+      // console.log("moved out of email input");
+      const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+      var emailValidation = document.createElement('small');
+      var sign_in = document.querySelector('#sign-in');
+
+      if (regex.test(email)) {
+        sign_in.disabled = false;
+      } else {
+        emailValidation.textContent = 'Invalid email';
+        emailValidation.style.color = 'red';
+        append.appendChild(emailValidation);
+        sign_in.disabled = true;
+      }
+      setTimeout(() => {
+        emailValidation.remove();
+      }, 3000);
+    });
+  </script>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+  integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+</html>
