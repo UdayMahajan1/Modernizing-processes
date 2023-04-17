@@ -1,0 +1,127 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(242, 241, 240) !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+}
+
+.header {
+  padding: 0rem 7rem 0rem 0rem;
+  background-color: white;
+  position: fixed;
+  z-index: 9999;
+}
+
+.cards {
+  padding-top: 8rem; 
+  width: 80rem;
+  margin: auto;
+}
+
+.cards .img {
+  width: 3rem;
+}
+
+.main-card {
+  display: flex;
+}
+
+.content {
+  padding-top: 2rem;
+}
+
+.con {
+  background-color: aliceblue;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  width: 60%;
+  margin: auto;
+}
+
+.form {
+  padding: 10px 20px;
+}
+
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+.form-field label {
+  display: block;
+  color: #000000;
+  margin-bottom: 5px;
+}
+
+.form-field input {
+  border: solid 2px #7d7d7d;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  display: block;
+  width: 100%;
+}
+
+.form-field input:focus {
+  outline: none;
+}
+
+.form-field.error input {
+  border-color: var(--error-color);
+}
+
+.form-field.success input {
+  border-color: var(--success-color);
+}
+
+
+.form-field small {
+  color: var(--error-color);
+}
+
+
+/* button */
+.button {
+  width: 100%;
+  padding: 3%;
+  background: #717171;
+  border-bottom: 2px solid #007bff;
+  border-top-style: none;
+  border-right-style: none;
+  border-left-style: none;
+  color: #000000;
+  border: 2px solid #000000;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background: #0069d9;
+  cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.form-field-button {
+  text-align: center;
+}
+
+.signUpBtn {
+  width: fit-containertent;
+  margin: 10px;
+  cursor: pointer;
+  color: black;
+  border-radius: 10px;
+  border: solid 2px transparent;
+  padding: 10px;
+
+}
